@@ -11,7 +11,7 @@ const CurrentWeather = ({ data }) => {
                 <City>{data.city}</City>
                 <WeatherDescription>{data.weather[0].description}</WeatherDescription>
             </div>
-            <Icon src={require(`../../icons/${data.weather[0].icon}.png`).default} alt="Weather Icon" />
+            <Icon src={require(`../../Icons/${data.weather[0].icon}.png`).default} alt="Weather Icon" />
         </Content>
         <Bottom>
             <Temperature>{data.main.temp}°C</Temperature>

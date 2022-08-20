@@ -19,7 +19,7 @@ const Forecast = ({ data }) => {
                 <AccordionItemHeading>
                     <AccordionItemButton>
                         <Daily>
-                            <Icon alt="Weather" src={require(`../../icons/${item.weather[0].icon}.png`).default} />
+                            <Icon alt="Weather" src={require(`../../Icons/${item.weather[0].icon}.png`).default} />
                             <Day>{forecastDays[index]}</Day>
                             <Description>{item.weather[0].description}</Description>
                             <MinMax>{Math.round(item.main.temp_min)}°C /{" "} {Math.round(item.main.temp_max)}°C</MinMax>
