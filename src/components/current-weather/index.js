@@ -1,20 +1,20 @@
 import React from "react";
 import { Wrapper, Content, City, WeatherDescription, Icon, Row, Label, Value, Bottom, Temperature, Details } from './currentWeather.styles';
-import Sunny from '../../Icons/01d.png'
+import Sunny from '../../'
 
 
-const CurrentWeather = () => {
+const CurrentWeather = ({ data }) => {
     return (
         <Wrapper>
         <Content>
             <div>
-                <City>Belgrade</City>
-                <WeatherDescription>Sunnny</WeatherDescription>
+                <City>{data.city}</City>
+                <WeatherDescription>{data.weather[0].description}</WeatherDescription>
             </div>
-            <Icon src={Sunny} alt="Weather Icon" />
+            <Icon src={require(`../../icons/${data.weather[0].icon}.png`).default} alt="Weather Icon" />
         </Content>
         <Bottom>
-            <Temperature>18°C</Temperature>
+            <Temperature>{data.main.temp}°C</Temperature>
             <Details>
                 <Row>
                 <Label>Details</Label>
@@ -22,22 +22,22 @@ const CurrentWeather = () => {
 
                 <Row>
                 <Label>Feels like</Label>
-                <Value>22°C</Value>
+                <Value>{data.main.feels_like}°C</Value>
                 </Row>
 
                 <Row>
                 <Label>Wind</Label>
-                <Value>2 m/s</Value>
+                <Value>{data.wind.speed} m/s</Value>
                 </Row>
 
                 <Row>
                 <Label>Humidity</Label>
-                <Value>15% </Value>
+                <Value>{data.main.humidity}% </Value>
                 </Row>
 
                 <Row>
                 <Label>Pressure</Label>
-                <Value>15 hPa</Value>
+                <Value>{data.main.pressure} hPa</Value>
                 </Row>
             </Details>
         </Bottom>

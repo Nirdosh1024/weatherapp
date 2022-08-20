@@ -35,7 +35,9 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        limit: 100000
+                        limit: 100000,
+                        name: 'img/[name].[containhash:8].[ext]',
+                        esModule: false
                     }
                 }
             }
