@@ -30,7 +30,7 @@ const Forecast = ({ data }) => {
                     <Details>
                         <DetailsItem>
                             <label>Pressure</label>
-                            <label>{item.main.pressure}hpa</label>
+                            <label>{item.main.pressure} hpa</label>
                         </DetailsItem>
                         <DetailsItem>
                             <label>Humidity</label>
@@ -38,7 +38,7 @@ const Forecast = ({ data }) => {
                         </DetailsItem>
                         <DetailsItem>
                             <label>Clouds</label>
-                            <label>{item.clouds.all}</label>
+                            <label>{item.clouds.all}%</label>
                         </DetailsItem>
                         <DetailsItem>
                             <label>Wind Speed</label>
@@ -46,7 +46,7 @@ const Forecast = ({ data }) => {
                         </DetailsItem>
                         <DetailsItem>
                             <label>Sea Level</label>
-                            <label>{item.main.sea_level}m</label>
+                            <label>{item.main.sea_level} m</label>
                         </DetailsItem>
                         <DetailsItem>
                             <label>Feels like</label>

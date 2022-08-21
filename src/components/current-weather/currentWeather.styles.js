@@ -44,7 +44,7 @@ export const Bottom = styled.div`
 
 export const Temperature = styled.p`
     font-weight: 600;
-    font-size: 50px;
+    font-size: 70px;
     width: auto;
     letter-spacing: -5px;
     margin: 10px 0;
