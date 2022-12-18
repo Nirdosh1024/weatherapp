@@ -8,8 +8,8 @@ const CurrentWeather = ({ data }) => {
         <Wrapper>
         <Content>
             <div>
-                <City>{data.city}</City>
-                <WeatherDescription>{data.weather[0].description}</WeatherDescription>
+                <City>City: {data.city}</City>
+                <WeatherDescription>Weather: {data.weather[0].description}</WeatherDescription>
             </div>
             <Icon src={require(`../../Icons/${data.weather[0].icon}.png`).default} alt="Weather Icon" />
         </Content>
@@ -21,7 +21,7 @@ const CurrentWeather = ({ data }) => {
                 </Row>
 
                 <Row>
-                <Label>Feels like</Label>
+                <Label>Room Temp</Label>
                 <Value>{data.main.feels_like}°C</Value>
                 </Row>
 

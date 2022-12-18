@@ -12,10 +12,10 @@ const Forecast = ({ data }) => {
     const dayInAWeek = new Date().getDay();
     const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInAWeek));
     return (<>
-        <Title>Daily</Title>
+        <Title>Forecast of next seven days</Title>
         <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => 
-            <AccordionItem key={index} >
+            <AccordionItem key={index}>
                 <AccordionItemHeading>
                     <AccordionItemButton>
                         <Daily>

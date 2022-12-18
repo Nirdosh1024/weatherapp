@@ -16,6 +16,7 @@ export const Daily = styled.div`
     cursor: pointer;
     font-size: 14px;
     padding: 5px 20px;
+    animation-delay: 1s;
 `
 
 export const Icon = styled.img`
@@ -58,7 +59,7 @@ export const DetailsItem = styled.div`
     height: 30px;
     justify-content: space-between;
     label:first-child {
-        color: #757575;
+        color: #ffffff;
     }
     label:last-child {
         color: #212121;

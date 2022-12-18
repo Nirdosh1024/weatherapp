@@ -9,10 +9,10 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: "Roboto", Arial !important;
+        font-family: "Source Sans Pro", sans-serif !important;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: #d5d4d4;
+        background-color: rgb(180, 111, 105);
     }
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;

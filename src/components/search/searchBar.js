@@ -3,6 +3,9 @@ import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { GEO_API_URL, geoApiOptions } from "../../API";
 
+// import styles
+import { Helper } from "./searchBar.style";
+
 const Search = ({ onSearchChange }) => {
     const [search, setSearch] = useState(null);
 
@@ -27,6 +30,8 @@ const Search = ({ onSearchChange }) => {
         onSearchChange(searchData);
     }
     return (
+        <>
+        <Helper>Enter the place you want to check for</Helper>
         <AsyncPaginate 
             placeholder="Search for city"
             debounceTimeout={600}
@@ -34,6 +39,7 @@ const Search = ({ onSearchChange }) => {
             onChange={handleOnChange}
             loadOptions={loadOptions}
         />
+        </>
     )
 }
 export default Search;
